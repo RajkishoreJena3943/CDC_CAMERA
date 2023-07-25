@@ -135,7 +135,7 @@ bool GstCamera::CreatePipeline() {
     std::cerr << "Failed to create a source" << std::endl;
     return false;
   }
-  gst_.video_convert = gst_element_factory_make("videoconvert", "videoconvert");
+  gst_.video_convert = gst_element_factory_make("imxvideoconvert_g2d", "imxvideoconvert_g2d");
   if (!gst_.video_convert) {
     std::cerr << "Failed to create a videoconvert" << std::endl;
     return false;
